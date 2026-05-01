@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Tony Nguyen</title>
+  <meta name="description" content="Thoughts and writeups on AI, cloud engineering, and the student-to-engineer journey by Tony Nguyen." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ── Navbar ── -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="navbar-logo">TN</a>
+  <div class="navbar-links" id="nav-links">
+    <a href="index.html" id="nav-home">Home</a>
+    <a href="about.html" id="nav-about">About</a>
+    <a href="portfolio.html" id="nav-portfolio">Portfolio</a>
+    <a href="blog.html" class="active" id="nav-blog">Blog</a>
+    <a href="contact.html" class="navbar-cta" id="nav-contact">Contact</a>
+  </div>
+  <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+    <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M3 6h18M3 12h18M3 18h18"/>
+    </svg>
+  </button>
+</nav>
+
+<!-- ── Page Hero ── -->
+<div class="page-hero">
+  <span class="section-tag reveal">Writing</span>
+  <h1 class="page-hero-title reveal">Blog</h1>
+  <p class="page-hero-sub reveal">Deep-dives, walkthroughs, and thoughts on AI, cloud, and software engineering.</p>
+</div>
+
+<!-- ── Featured Post ── -->
+<section class="section" style="padding-top: 1rem;">
+  <div class="card reveal" style="background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(99,102,241,0.05)); border-color: rgba(99,102,241,0.25); padding: 2.5rem; margin-bottom: 3rem;">
+    <span class="blog-tag" style="margin-bottom: 1rem;">⭐ Featured</span>
+    <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem; line-height: 1.3;">
+      Building a Meeting Intelligence Pipeline from Scratch
+    </h2>
+    <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.8; max-width: 640px;">
+      A deep technical walkthrough of how I built an end-to-end AI system that transcribes meetings, 
+      identifies speakers, extracts sentiment, generates summaries, and delivers audio briefings — 
+      all automated with Python and HuggingFace transformers.
+    </p>
+    <div class="blog-meta" style="margin-bottom: 1.5rem;">
+      <span>April 2026</span>
+      <span class="blog-meta-dot"></span>
+      <span>8 min read</span>
+      <span class="blog-meta-dot"></span>
+      <span>AI / ML</span>
+    </div>
+    <a href="blog-posts/meeting-intelligence.html" class="btn btn-primary" id="blog-featured-read">Read Article →</a>
+  </div>
+
+  <!-- Blog Grid -->
+  <div class="section-header reveal" style="text-align: left; margin-bottom: 2rem;">
+    <h2 class="section-title" style="font-size: 1.5rem;">All Posts</h2>
+  </div>
+
+  <div class="grid-3 reveal">
+    <article class="card blog-card" id="blog-sqli">
+      <span class="blog-tag">Security</span>
+      <h3 class="blog-title">Deploying Live SQLi Detection on AWS with Terraform</h3>
+      <p class="blog-excerpt">How I built and deployed a real-time SQL injection detection system using AWS EC2, CloudWatch, and Terraform infrastructure-as-code.</p>
+      <div class="blog-meta">
+        <span>March 2026</span>
+        <span class="blog-meta-dot"></span>
+        <span>6 min read</span>
+      </div>
+    </article>
+
+    <article class="card blog-card" id="blog-stable-diffusion">
+      <span class="blog-tag">AI / ML</span>
+      <h3 class="blog-title">Scaling Stable Diffusion for E-Commerce Product Images</h3>
+      <p class="blog-excerpt">Lessons learned from processing 10GB of Amazon product metadata and generating thousands of AI images with SDXL on GPU.</p>
+      <div class="blog-meta">
+        <span>February 2026</span>
+        <span class="blog-meta-dot"></span>
+        <span>7 min read</span>
+      </div>
+    </article>
+
+    <article class="card blog-card" id="blog-research-athon">
+      <span class="blog-tag">Career</span>
+      <h3 class="blog-title">What Placing 3rd at Research-A-Thon Taught Me</h3>
+      <p class="blog-excerpt">Reflections on presenting AI research in a competitive academic setting, and how to communicate complex ideas to a mixed audience.</p>
+      <div class="blog-meta">
+        <span>April 2026</span>
+        <span class="blog-meta-dot"></span>
+        <span>4 min read</span>
+      </div>
+    </article>
+
+    <article class="card blog-card" id="blog-elevenlabs">
+      <span class="blog-tag">AI / ML</span>
+      <h3 class="blog-title">Integrating ElevenLabs TTS into a Python Pipeline</h3>
+      <p class="blog-excerpt">Step-by-step guide to adding professional voice narration to any Python ML workflow using the ElevenLabs API.</p>
+      <div class="blog-meta">
+        <span>February 2026</span>
+        <span class="blog-meta-dot"></span>
+        <span>5 min read</span>
+      </div>
+    </article>
+
+    <article class="card blog-card" id="blog-productivity">
+      <span class="blog-tag">Productivity</span>
+      <h3 class="blog-title">My AI-Powered Second Brain System</h3>
+      <p class="blog-excerpt">How I use AI assistants, structured folders, and markdown files to stay organized and productive as a grad student and developer.</p>
+      <div class="blog-meta">
+        <span>April 2026</span>
+        <span class="blog-meta-dot"></span>
+        <span>5 min read</span>
+      </div>
+    </article>
+
+    <article class="card blog-card" id="blog-portfolio">
+      <span class="blog-tag">Web Dev</span>
+      <h3 class="blog-title">Building a Portfolio Without Any Framework</h3>
+      <p class="blog-excerpt">Why I chose plain HTML, Tailwind CSS, and vanilla JS for my portfolio, and how I kept the design feeling premium and modern.</p>
+      <div class="blog-meta">
+        <span>April 2026</span>
+        <span class="blog-meta-dot"></span>
+        <span>4 min read</span>
+      </div>
+    </article>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="card reveal" style="margin-top: 3rem; text-align: center; padding: 2.5rem; background: var(--bg-card);">
+    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Stay in the Loop</h3>
+    <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.875rem;">Get notified when I publish new articles. No spam, ever.</p>
+    <form style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;" id="newsletter-form" onsubmit="handleNewsletter(event)">
+      <input type="email" class="form-input" placeholder="your@email.com" id="newsletter-email" style="max-width: 280px;" required />
+      <button type="submit" class="btn btn-primary" id="newsletter-submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <p>© 2026 <a href="index.html">Tony Nguyen</a> · Built with ❤️ using HTML, Tailwind CSS & JavaScript · <a href="https://vercel.com" target="_blank">Deployed on Vercel</a></p>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  function handleNewsletter(e) {
+    e.preventDefault();
+    const btn = document.getElementById('newsletter-submit');
+    btn.textContent = '✓ Subscribed!';
+    btn.style.background = 'var(--success)';
+    btn.disabled = true;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Tony Nguyen</title>
+  <meta name="description" content="Explore Tony Nguyen's projects — AI pipelines, cloud infrastructure, security systems, and more." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ── Navbar ── -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="navbar-logo">TN</a>
+  <div class="navbar-links" id="nav-links">
+    <a href="index.html" id="nav-home">Home</a>
+    <a href="about.html" id="nav-about">About</a>
+    <a href="portfolio.html" class="active" id="nav-portfolio">Portfolio</a>
+    <a href="blog.html" id="nav-blog">Blog</a>
+    <a href="contact.html" class="navbar-cta" id="nav-contact">Contact</a>
+  </div>
+  <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+    <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M3 6h18M3 12h18M3 18h18"/>
+    </svg>
+  </button>
+</nav>
+
+<!-- ── Page Hero ── -->
+<div class="page-hero">
+  <span class="section-tag reveal">My Work</span>
+  <h1 class="page-hero-title reveal">Portfolio</h1>
+  <p class="page-hero-sub reveal">Projects in AI, cloud infrastructure, security engineering, and web development.</p>
+</div>
+
+<!-- ── Filter ── -->
+<div style="padding: 0 2rem 2rem; max-width: 1100px; margin: 0 auto;">
+  <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;" id="filter-btns">
+    <button class="btn btn-primary filter-btn" data-filter="all" id="filter-all">All</button>
+    <button class="btn btn-outline filter-btn" data-filter="ai" id="filter-ai">AI / ML</button>
+    <button class="btn btn-outline filter-btn" data-filter="cloud" id="filter-cloud">Cloud</button>
+    <button class="btn btn-outline filter-btn" data-filter="security" id="filter-security">Security</button>
+    <button class="btn btn-outline filter-btn" data-filter="web" id="filter-web">Web</button>
+  </div>
+</div>
+
+<!-- ── Projects Grid ── -->
+<section class="section" style="padding-top: 0;">
+  <div class="grid-auto" id="projects-grid">
+
+    <!-- Meeting Intelligence -->
+    <div class="card project-card reveal" data-category="ai" id="card-meeting">
+      <div class="project-card-header">
+        <div class="project-icon">🎙️</div>
+        <span style="font-size: 0.7rem; padding: 0.15rem 0.5rem; background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2); border-radius: 999px; color: var(--accent);">AI / ML</span>
+      </div>
+      <div class="project-title">Meeting Intelligence System</div>
+      <p class="project-desc">
+        End-to-end AI pipeline for meeting processing. Transcribes audio with Whisper, 
+        performs speaker diarization, runs sentiment analysis and NLP summarization, 
+        then generates TTS audio briefings via ElevenLabs.
+      </p>
+      <ul style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.25rem;">
+        <li>✓ Multi-speaker diarization</li>
+        <li>✓ Sentiment & topic analysis</li>
+        <li>✓ Automated TTS briefings</li>
+        <li>✓ End-to-end pipeline automation</li>
+      </ul>
+      <div class="project-tags">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">HuggingFace</span>
+        <span class="project-tag">Whisper</span>
+        <span class="project-tag">ElevenLabs</span>
+        <span class="project-tag">FFmpeg</span>
+        <span class="project-tag">NLP</span>
+      </div>
+    </div>
+
+    <!-- E-Commerce Pipeline -->
+    <div class="card project-card reveal" data-category="ai cloud" id="card-ecommerce">
+      <div class="project-card-header">
+        <div class="project-icon">🛍️</div>
+        <span style="font-size: 0.7rem; padding: 0.15rem 0.5rem; background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2); border-radius: 999px; color: var(--accent);">AI / Cloud</span>
+      </div>
+      <div class="project-title">E-Commerce Image Pipeline</div>
+      <p class="project-desc">
+        Multimodal agent pipeline that ingests Amazon Electronics metadata, generates 
+        product images using Stable Diffusion (SDXL), and creates professional 
+        voice-over narrations with ElevenLabs. Stores results in DynamoDB.
+      </p>
+      <ul style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.25rem;">
+        <li>✓ 10GB Amazon dataset processing</li>
+        <li>✓ GPU-accelerated SDXL image generation</li>
+        <li>✓ ElevenLabs voice synthesis</li>
+        <li>✓ AWS DynamoDB storage</li>
+      </ul>
+      <div class="project-tags">
+        <span class="project-tag">Stable Diffusion</span>
+        <span class="project-tag">SDXL</span>
+        <span class="project-tag">ElevenLabs</span>
+        <span class="project-tag">AWS</span>
+        <span class="project-tag">DynamoDB</span>
+        <span class="project-tag">Python</span>
+      </div>
+    </div>
+
+    <!-- SQLi Detection -->
+    <div class="card project-card reveal" data-category="cloud security" id="card-sqli">
+      <div class="project-card-header">
+        <div class="project-icon">🛡️</div>
+        <span style="font-size: 0.7rem; padding: 0.15rem 0.5rem; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.2); border-radius: 999px; color: var(--danger);">Security</span>
+      </div>
+      <div class="project-title">SQLi Detection Engine</div>
+      <p class="project-desc">
+        Live SQL injection detection and monitoring system. Terraform-managed AWS 
+        infrastructure deploys EC2 instances that simulate and detect SQLi attacks 
+        with real-time CloudWatch dashboards and automated alerting.
+      </p>
+      <ul style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.25rem;">
+        <li>✓ Infrastructure-as-Code with Terraform</li>
+        <li>✓ Real-time CloudWatch dashboards</li>
+        <li>✓ Live attack simulation</li>
+        <li>✓ Automated alarm triggers</li>
+      </ul>
+      <div class="project-tags">
+        <span class="project-tag">Terraform</span>
+        <span class="project-tag">AWS EC2</span>
+        <span class="project-tag">CloudWatch</span>
+        <span class="project-tag">Security</span>
+        <span class="project-tag">IaC</span>
+      </div>
+    </div>
+
+    <!-- HyperLogistics -->
+    <div class="card project-card reveal" data-category="ai cloud" id="card-hyper">
+      <div class="project-card-header">
+        <div class="project-icon">🚛</div>
+        <span style="font-size: 0.7rem; padding: 0.15rem 0.5rem; background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2); border-radius: 999px; color: var(--accent);">AI / Cloud</span>
+      </div>
+      <div class="project-title">HyperLogistics</div>
+      <p class="project-desc">
+        Neuro-symbolic AI platform for intelligent logistics optimization. Combines 
+        deep learning with symbolic reasoning to optimize route planning and resource 
+        allocation at scale across distributed cloud infrastructure.
+      </p>
+      <ul style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.25rem;">
+        <li>✓ Neuro-symbolic reasoning engine</li>
+        <li>✓ Scalable cloud data pipelines</li>
+        <li>✓ Route optimization algorithms</li>
+        <li>✓ Real-world logistics constraints</li>
+      </ul>
+      <div class="project-tags">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">Neuro-Symbolic AI</span>
+        <span class="project-tag">PyTorch</span>
+        <span class="project-tag">AWS</span>
+        <span class="project-tag">Snowflake</span>
+        <span class="project-tag">Optimization</span>
+      </div>
+    </div>
+
+    <!-- Portfolio Website -->
+    <div class="card project-card reveal" data-category="web" id="card-portfolio">
+      <div class="project-card-header">
+        <div class="project-icon">🌐</div>
+        <span style="font-size: 0.7rem; padding: 0.15rem 0.5rem; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.2); border-radius: 999px; color: var(--success);">Web</span>
+      </div>
+      <div class="project-title">Personal Portfolio</div>
+      <p class="project-desc">
+        This very website! Built with plain HTML, vanilla JavaScript, and Tailwind CSS 
+        from scratch. Features a dark-mode ShadCN-inspired design system, smooth 
+        animations, and is deployed on Vercel.
+      </p>
+      <ul style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.25rem;">
+        <li>✓ No frameworks — pure HTML/CSS/JS</li>
+        <li>✓ ShadCN-inspired design system</li>
+        <li>✓ Scroll animations & micro-interactions</li>
+        <li>✓ Deployed on Vercel</li>
+      </ul>
+      <div class="project-tags">
+        <span class="project-tag">HTML</span>
+        <span class="project-tag">CSS</span>
+        <span class="project-tag">JavaScript</span>
+        <span class="project-tag">Tailwind CSS</span>
+        <span class="project-tag">Vercel</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <p>© 2026 <a href="index.html">Tony Nguyen</a> · Built with ❤️ using HTML, Tailwind CSS & JavaScript · <a href="https://vercel.com" target="_blank">Deployed on Vercel</a></p>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // Filter functionality
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('#projects-grid .card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+      filterBtns.forEach(b => {
+        b.classList.remove('btn-primary');
+        b.classList.add('btn-outline');
+      });
+      btn.classList.add('btn-primary');
+      btn.classList.remove('btn-outline');
+
+      cards.forEach(card => {
+        const categories = card.dataset.category || '';
+        if (filter === 'all' || categories.includes(filter)) {
+          card.style.display = '';
+          card.style.animation = 'fadeInUp 0.4s ease both';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
